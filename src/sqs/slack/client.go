@@ -8,11 +8,15 @@ import (
 	"net/http"
 
 	"sqs/common"
+	"sqs/handlers"
 
 	"github.com/gorilla/websocket"
 )
 
 const ERROR_LIMIT = 10
+
+var LimitReachedError = errors.New("Error limit reached, terminating connection.")
+var ConnectionClosedError = errors.New("Connection closed by server.")
 
 type StartState struct {
 	WsUrl string `json:"url"`
@@ -70,10 +74,13 @@ func listenOnSocket(url string) error {
 	for {
 		err = processMessage(conn)
 		if err != nil {
+			if err == ConnectionClosedError {
+				return err
+			}
 			log.Println(common.AppendError("Error processing incoming message:", err).Error())
 			errorCount++
 			if errorCount > ERROR_LIMIT {
-				return errors.New("Error limit reached, terminating connection.")
+				return LimitReachedError
 			}
 		}
 	}
@@ -82,17 +89,55 @@ func listenOnSocket(url string) error {
 }
 
 func processMessage(conn *websocket.Conn) error {
-	messageType, p, err := conn.ReadMessage()
+	messageType, data, err := conn.ReadMessage()
 	if err != nil {
 		return err
 	}
 
 	log.Println("Incoming message received.")
 	log.Println("Message type:", messageType)
-	log.Println("Message body:", string(p))
-	// if err = conn.WriteMessage(messageType, p); err != nil {
-	// 	return err
-	// }
+
+	switch messageType {
+	case websocket.TextMessage:
+		log.Println("Message body:", string(data))
+
+		message := IncomingMessage{}
+		err = message.UnmarshalJSON(data)
+		if err != nil {
+			return err
+		}
+
+		switch message.Type {
+		case MessageEvent:
+			chatMessage := message.Inner.(ChatMessage)
+			if chatMessage.IsDirect() {
+				response := handlers.HandleMessage(chatMessage.Body)
+
+				log.Println("Responding:", response)
+
+				replyMessage := NewOutgoingMessage(chatMessage.ChannelId, response)
+				replyData, err := json.Marshal(replyMessage)
+				if err != nil {
+					return common.AppendError("Error marshalling reply:", err)
+				}
+
+				log.Println("Marshalled:", string(replyData))
+
+				err = conn.WriteMessage(websocket.TextMessage, replyData)
+				if err != nil {
+					return common.AppendError("Error responding to message:", err)
+				}
+			} else {
+				log.Println("Non-direct message cannot be handled yet, ignoring.")
+			}
+		default:
+			log.Println("Cannot handle message event type, ignoring.")
+		}
+	case websocket.CloseMessage:
+		return ConnectionClosedError
+	default:
+		log.Println("Cannot handle message type, ignoring.")
+	}
 
 	return nil
 }
