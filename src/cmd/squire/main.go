@@ -10,7 +10,6 @@ import (
 func main() {
 	if len(os.Args) < 2 {
 		log.Fatalln("Token is required for starting the bot.")
-		os.Exit(1)
 	}
 
 	for {
