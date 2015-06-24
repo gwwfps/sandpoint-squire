@@ -1,0 +1,63 @@
+- name: Chellan, Sword of Greed
+  set: 6
+  copies: 1
+- name: Emerald Codex
+  set: 4
+  copies: 1
+- name: Fanged Falchion
+  set: 5
+  copies: 1
+- name: Headband of Vast Intelligence
+  set: 3
+  copies: 1
+- name: Impaler of Thorns
+  set: 2
+  copies: 1
+- name: Karzoug's Burning Glaive
+  set: 6
+  copies: 1
+- name: Medusa Mask
+  set: 2
+  copies: 1
+- name: Mokmurian's Club
+  set: 4
+  copies: 1
+- name: Ordikon's Staff
+  set: 5
+  copies: 1
+- name: Revelation Quill
+  set: 5
+  copies: 1
+- name: Robe of Runes
+  set: 4
+  copies: 1
+- name: Robes of Xin-Shalast
+  set: 6
+  copies: 1
+- name: Runeforged Weapons
+  set: 5
+  copies: 1
+- name: Sihedron  Medallion
+  set: 1*
+  copies: 1
+- name: Sihedron  Medallion
+  set: 2
+  copies: 1
+- name: Sihedron  Medallion
+  set: 3
+  copies: 1
+- name: Sihedron Tome
+  set: 6
+  copies: 1
+- name: Snakeskin Tunic
+  set: 2
+  copies: 1
+- name: Staff of Hungry Shadows
+  set: 5
+  copies: 1
+- name: Summon Monster
+  set: 5
+  copies: 1
+- name: Wand of Enervation
+  set: 3
+  copies: 1

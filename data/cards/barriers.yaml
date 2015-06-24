@@ -1,0 +1,138 @@
+- name: Ambush
+  set: B
+  copies: 3
+- name: Arcane Lock
+  set: 4
+  copies: 1
+- name: Avalanche
+  set: 6
+  copies: 2
+- name: Battered Chest
+  set: B
+  copies: 2
+- name: Battered Chest
+  set: C
+  copies: 1
+- name: Circles of Binding
+  set: 4
+  copies: 1
+- name: Collapsed Ceiling
+  set: B
+  copies: 2
+- name: Corroded Lock
+  set: 6
+  copies: 1
+- name: Crushing Door
+  set: 5
+  copies: 2
+- name: Cryptic Message
+  set: 3
+  copies: 1
+- name: Dance with  Squealy Nord
+  set: P
+  copies: 1
+- name: Disjunction Pulse
+  set: 5
+  copies: 2
+- name: Door Spike
+  set: 3
+  copies: 2
+- name: Explosive Runes
+  set: B
+  copies: 1
+- name: Explosive Runes
+  set: C
+  copies: 1
+- name: Falling Bell
+  set: 2
+  copies: 2
+- name: Goblin Raid
+  set: 1
+  copies: 2
+- name: Hand Chopper
+  set: 3
+  copies: 2
+- name: Icy Ledge
+  set: 6
+  copies: 2
+- name: Invasion Plans
+  set: 4
+  copies: 1
+- name: Large Chest
+  set: B
+  copies: 2
+- name: Large Chest
+  set: C
+  copies: 1
+- name: Locked Passage
+  set: B
+  copies: 1
+- name: Locked Stone Door
+  set: 2
+  copies: 1
+- name: Monster in the Closet
+  set: 1
+  copies: 1
+- name: Mystic Inscription
+  set: B
+  copies: 1
+- name: Mystic Inscription
+  set: C
+  copies: 1
+- name: Necromantic Deathtrap
+  set: 5
+  copies: 2
+- name: Occluding Field
+  set: 6
+  copies: 2
+- name: Pit of Malfeshnekor
+  set: 1
+  copies: 1
+- name: Pit Trap
+  set: B
+  copies: 2
+- name: Ranger Stash
+  set: 3
+  copies: 1
+- name: Reduction Field
+  set: 4
+  copies: 2
+- name: Secret Stash
+  set: C
+  copies: 1
+- name: Shopkeeper's Daughter
+  set: 1
+  copies: 1
+- name: Skeleton Horde
+  set: B
+  copies: 2
+- name: Skeleton Horde
+  set: C
+  copies: 1
+- name: Skinsaw Ritual
+  set: 2
+  copies: 3
+- name: Slashing Blade
+  set: 1
+  copies: 2
+- name: Stampeding Aurochs
+  set: 6
+  copies: 1
+- name: Trapped Locker
+  set: B
+  copies: 1
+- name: Trapped Passageway
+  set: B
+  copies: 2
+- name: Trapped Spellbook
+  set: 5
+  copies: 2
+- name: Treasure Map
+  set: B
+  copies: 1
+- name: Zombie Horde
+  set: 2
+  copies: 2
+- name: Zombie Nest
+  set: 2
+  copies: 1

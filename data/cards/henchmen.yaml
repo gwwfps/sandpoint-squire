@@ -1,0 +1,177 @@
+- name: Alu-Demon Sister
+  set: 5
+  copies: 7
+- name: Ancient Skeleton
+  set: B
+  copies: 5
+- name: Ancient Skeleton
+  set: C
+  copies: 2
+- name: Bandit
+  set: B
+  copies: 5
+- name: Bandit
+  set: C
+  copies: 2
+- name: Bruthazmus
+  set: 1
+  copies: 1
+- name: Cannibal Haunt
+  set: 6
+  copies: 6
+- name: Charmed Faceless Stalker
+  set: 2
+  copies: 6
+- name: Cinderma
+  set: 4
+  copies: 1
+- name: Crowfood Graul
+  set: 3
+  copies: 1
+- name: Dorella and Hookmaw Kreeg
+  set: 3
+  copies: 1
+- name: Dr. Habe
+  set: 2
+  copies: 1
+- name: Enga Keckvia
+  set: 4
+  copies: 1
+- name: Enslaved Blue Dragon
+  set: 6
+  copies: 1
+- name: Forgefiend
+  set: 4
+  copies: 1
+- name: Ghoul Scarecrow
+  set: 2
+  copies: 6
+- name: Goblin Raider
+  set: 1
+  copies: 6
+- name: Graul Ogrekin
+  set: 3
+  copies: 5
+- name: Grayst Sevilla
+  set: 2
+  copies: 1
+- name: Harpy Monk
+  set: 4
+  copies: 7
+- name: Haunt
+  set: 2
+  copies: 7
+- name: Headless Lord
+  set: 4
+  copies: 1
+- name: Highlady Athroxis
+  set: 5
+  copies: 1
+- name: Hill Giant Runeslave
+  set: 4
+  copies: 5
+- name: Hook Mountain Hag
+  set: 3
+  copies: 5
+- name: Hound of Lamashtu
+  set: 5
+  copies: 7
+- name: Jorgenfist Stone Giant
+  set: 4
+  copies: 6
+- name: Karivek Vekker
+  set: 6
+  copies: 1
+- name: Kaven Windstrike
+  set: 3
+  copies: 1
+- name: Khalib
+  set: 6
+  copies: 1
+- name: Koruvus
+  set: 1
+  copies: 1
+- name: Kreeg Ogre
+  set: 3
+  copies: 7
+- name: Lamatar Bayden
+  set: 3
+  copies: 1
+- name: Leng Spider
+  set: 6
+  copies: 6
+- name: Lokansir
+  set: 4
+  copies: 1
+- name: Longtooth
+  set: 4
+  copies: 1
+- name: Lucrecia
+  set: 3
+  copies: 1
+- name: Lunderbud
+  set: 3
+  copies: 1
+- name: Lyrie Akenja
+  set: 1
+  copies: 1
+- name: Nightbelly Boa
+  set: 3
+  copies: 8
+- name: Orik Vancaskerkin
+  set: 1
+  copies: 1
+- name: Pidget Tergleson
+  set: 2
+  copies: 1
+- name: Poison Trap
+  set: B
+  copies: 5
+- name: Poison Trap
+  set: C
+  copies: 2
+- name: Ruckus Graul and Hound
+  set: 3
+  copies: 1
+- name: Scarecrow Golem
+  set: 2
+  copies: 1
+- name: Silas Vekker
+  set: 6
+  copies: 1
+- name: Simulacrum of Vraxeris
+  set: 5
+  copies: 4
+- name: Skinsaw Cultist
+  set: 2
+  copies: 7
+- name: Stone Head
+  set: 5
+  copies: 7
+- name: Tangletooth
+  set: 1
+  copies: 1
+- name: Tsuto Kaikitsu
+  set: 1
+  copies: 1
+- name: Tyrant Troll
+  set: 4
+  copies: 4
+- name: Viorian Dekanti
+  set: 6
+  copies: 1
+- name: Warden of Runes
+  set: 6
+  copies: 8
+- name: Warrior of Wrath
+  set: 5
+  copies: 6
+- name: Wrathful Sinspawn
+  set: 1
+  copies: 6
+- name: Xyoddin Xerriock
+  set: 5
+  copies: 1
+- name: Zombie Minions
+  set: 2
+  copies: 4

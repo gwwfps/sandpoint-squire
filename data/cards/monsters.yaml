@@ -1,0 +1,282 @@
+- name: Abominable Snowman
+  set: 6
+  copies: 2
+- name: Attic Whisperer
+  set: 1
+  copies: 1
+- name: Bugbear
+  set: B
+  copies: 2
+- name: Bugbear
+  set: C
+  copies: 1
+- name: Bunyip
+  set: B
+  copies: 2
+- name: Carrionstorm
+  set: 2
+  copies: 2
+- name: Cave Bear
+  set: 4
+  copies: 1
+- name: Clay Golem
+  set: 5
+  copies: 1
+- name: Cultist
+  set: B
+  copies: 2
+- name: Cultist
+  set: C
+  copies: 2
+- name: Deathweb
+  set: 4
+  copies: 1
+- name: Diseased Rats
+  set: 2
+  copies: 2
+- name: Donkey Rats
+  set: 3
+  copies: 1
+- name: Elder Earth Elemental
+  set: 5
+  copies: 1
+- name: Elder Water Elemental
+  set: 5
+  copies: 1
+- name: Enchanter
+  set: B
+  copies: 2
+- name: Enchanter
+  set: C
+  copies: 1
+- name: Faceless Stalker
+  set: 2
+  copies: 2
+- name: Frost Worm
+  set: 6
+  copies: 1
+- name: Gamigin
+  set: 6
+  copies: 1
+- name: Ghost
+  set: B
+  copies: 2
+- name: Ghoul
+  set: B
+  copies: 1
+- name: Ghoul
+  set: 2
+  copies: 3
+- name: Ghoul Bat
+  set: 4
+  copies: 1
+- name: Giant Gecko
+  set: B
+  copies: 2
+- name: Giant Hermit Crab
+  set: 1
+  copies: 1
+- name: Goblin Commando
+  set: B
+  copies: 3
+- name: Goblin Cutpurse
+  set: 1
+  copies: 2
+- name: Goblin Dog
+  set: 1
+  copies: 2
+- name: Goblin Pyro
+  set: 1
+  copies: 3
+- name: Goblin Snake
+  set: 1
+  copies: 2
+- name: Goblin Warchanter
+  set: 1
+  copies: 3
+- name: Goblin Warrior
+  set: B
+  copies: 3
+- name: Grazuul
+  set: 3
+  copies: 1
+- name: Grindylow
+  set: P
+  copies: 1
+- name: Hag
+  set: 3
+  copies: 1
+- name: Harpy
+  set: 4
+  copies: 2
+- name: Hell Hound
+  set: B
+  copies: 1
+- name: Hidden Beast
+  set: 6
+  copies: 1
+- name: Hill Giant
+  set: B
+  copies: 1
+- name: Hill Giant
+  set: 4
+  copies: 2
+- name: Horror Tree
+  set: 6
+  copies: 1
+- name: Hungerer
+  set: 6
+  copies: 1
+- name: Iron Golem
+  set: 5
+  copies: 1
+- name: Mammoth
+  set: 4
+  copies: 1
+- name: Mercenary
+  set: B
+  copies: 4
+- name: Muck Graul
+  set: 3
+  copies: 1
+- name: Mummy
+  set: 5
+  copies: 1
+- name: Myriana
+  set: 3
+  copies: 1
+- name: Ogre
+  set: B
+  copies: 2
+- name: Ogre
+  set: C
+  copies: 1
+- name: Ogre
+  set: 3
+  copies: 2
+- name: Ogrekin
+  set: 3
+  copies: 2
+- name: Plague Zombie
+  set: B
+  copies: 1
+- name: Plague Zombie
+  set: C
+  copies: 2
+- name: Rat Swarm
+  set: B
+  copies: 2
+- name: Red Cap
+  set: 4
+  copies: 1
+- name: Roc
+  set: 4
+  copies: 1
+- name: Satyr
+  set: C
+  copies: 1
+- name: Scarlet Walker
+  set: 6
+  copies: 2
+- name: Scout
+  set: B
+  copies: 2
+- name: Shadow
+  set: B
+  copies: 2
+- name: Shadow
+  set: C
+  copies: 1
+- name: Shemhazian Demon
+  set: 6
+  copies: 1
+- name: Shining Child
+  set: 4
+  copies: 1
+- name: Shining Child
+  set: 5
+  copies: 1
+- name: Sinspawn Axeman
+  set: 5
+  copies: 2
+- name: Siren
+  set: B
+  copies: 1
+- name: Siren
+  set: C
+  copies: 1
+- name: Skeleton
+  set: B
+  copies: 3
+- name: Skulking Vampire
+  set: 6
+  copies: 2
+- name: Skull Ripper
+  set: 3
+  copies: 1
+- name: Sneak
+  set: B
+  copies: 2
+- name: Sneak
+  set: C
+  copies: 1
+- name: Spectre
+  set: B
+  copies: 1
+- name: Spectre
+  set: C
+  copies: 1
+- name: Stone Giant
+  set: 4
+  copies: 2
+- name: Succubus
+  set: 5
+  copies: 1
+- name: Tickwood Boar
+  set: 1
+  copies: 2
+- name: Traitor
+  set: B
+  copies: 1
+- name: Traitor
+  set: C
+  copies: 1
+- name: Treachery Demon
+  set: 5
+  copies: 1
+- name: Troll
+  set: 4
+  copies: 2
+- name: Warden of Thunder
+  set: 6
+  copies: 2
+- name: Warden of Wind
+  set: 6
+  copies: 2
+- name: Warlord
+  set: B
+  copies: 2
+- name: Werewolf
+  set: B
+  copies: 1
+- name: Werewolf
+  set: C
+  copies: 1
+- name: Wyvern
+  set: 4
+  copies: 1
+- name: Xulgath
+  set: B
+  copies: 1
+- name: Yeth Hound
+  set: 1
+  copies: 2
+- name: Zombie
+  set: B
+  copies: 3
+- name: Zombie Giant
+  set: B
+  copies: 1
+- name: Zombie Giant
+  set: C
+  copies: 1

@@ -1,0 +1,117 @@
+- name: Adamantine Plate Armor
+  set: 6
+  copies: 1
+- name: Arrow Catching Studded Leather
+  set: 2
+  copies: 1
+- name: Bolstering Armor
+  set: 5
+  copies: 1
+- name: Breastplate of Fire Resistance
+  set: 4
+  copies: 2
+- name: Chain Mail
+  set: B
+  copies: 4
+- name: Chain Mail
+  set: C
+  copies: 1
+- name: Chainmail of Cold Resistance
+  set: 4
+  copies: 1
+- name: Deathbane Shield
+  set: 2
+  copies: 1
+- name: Demon Armor
+  set: 6
+  copies: 1
+- name: Elven Breastplate
+  set: 1
+  copies: 2
+- name: Elven Chain Shirt
+  set: 1
+  copies: 1
+- name: Elven Chain Shirt
+  set: B
+  copies: 2
+- name: Entropy Shield
+  set: 6
+  copies: 1
+- name: Fortress Shield
+  set: 6
+  copies: 2
+- name: Goblin Plate +1
+  set: P
+  copies: 1
+- name: Greater Bolstering Armor
+  set: 6
+  copies: 1
+- name: Half-Plate
+  set: B
+  copies: 3
+- name: Half-Plate
+  set: C
+  copies: 2
+- name: Hide Armor of Fire Resistance
+  set: 2
+  copies: 1
+- name: Invincible Breastplate
+  set: 5
+  copies: 2
+- name: Leather Armor
+  set: B
+  copies: 2
+- name: Leather Armor
+  set: C
+  copies: 1
+- name: Lesser Bolstering Armor
+  set: 4
+  copies: 1
+- name: Magic Chain Mail
+  set: B
+  copies: 1
+- name: Magic Chain Mail
+  set: C
+  copies: 1
+- name: Magic Full Plate
+  set: 3
+  copies: 2
+- name: Magic Half-Plate
+  set: B
+  copies: 1
+- name: Magic Half-Plate
+  set: C
+  copies: 1
+- name: Magic Leather Armor
+  set: B
+  copies: 3
+- name: Magic Leather Armor
+  set: C
+  copies: 1
+- name: Magic Shield
+  set: B
+  copies: 1
+- name: Magic Shield
+  set: C
+  copies: 1
+- name: Magic Studded Leather Armor
+  set: 3
+  copies: 2
+- name: Reflecting Shield
+  set: 4
+  copies: 1
+- name: Shield of Fire Resistance
+  set: 1
+  copies: 1
+- name: Spiny Shield
+  set: 3
+  copies: 1
+- name: Winged Shield
+  set: 5
+  copies: 1
+- name: Wooden Shield
+  set: B
+  copies: 3
+- name: Wooden Shield
+  set: C
+  copies: 2

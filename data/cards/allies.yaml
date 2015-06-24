@@ -1,0 +1,174 @@
+- name: Acolyte
+  set: B
+  copies: 3
+- name: Acolyte
+  set: C
+  copies: 1
+- name: Aldern Foxglove
+  set: 1
+  copies: 1
+- name: Ameik Kaijitsu
+  set: 1
+  copies: 1
+- name: Archer
+  set: B
+  copies: 3
+- name: Ayruzi
+  set: 6
+  copies: 1
+- name: Bear
+  set: 4
+  copies: 1
+- name: Black Arrow Ranger
+  set: 3
+  copies: 3
+- name: Brodert Quink
+  set: 2
+  copies: 1
+- name: Burglar
+  set: B
+  copies: 2
+- name: Burglar
+  set: C
+  copies: 1
+- name: Cat
+  set: 3
+  copies: 2
+- name: Charmed Red Dragon
+  set: 4
+  copies: 2
+- name: Clockwork Librarian
+  set: 4
+  copies: 1
+- name: Conna the Wise
+  set: 4
+  copies: 1
+- name: Crow
+  set: B
+  copies: 1
+- name: Crow
+  set: C
+  copies: 1
+- name: Cyrdak Drokkus
+  set: 1
+  copies: 1
+- name: Dog
+  set: C
+  copies: 2
+- name: Eagle
+  set: 4
+  copies: 1
+- name: Elven Sharpshooter
+  set: 5
+  copies: 2
+- name: Father Zantus
+  set: B
+  copies: 1
+- name: Giant Badger
+  set: 3
+  copies: 1
+- name: Grizzled Mercenary
+  set: 1
+  copies: 2
+- name: Guard
+  set: B
+  copies: 3
+- name: Guide
+  set: B
+  copies: 4
+- name: Gyukak
+  set: 6
+  copies: 1
+- name: Ilsoari Gandethus
+  set: 1
+  copies: 1
+- name: Jakardos Sovark
+  set: 3
+  copies: 1
+- name: Lizard
+  set: 4
+  copies: 1
+- name: Maester Grump
+  set: 2
+  copies: 1
+- name: Mayor Kendra Deverin
+  set: B
+  copies: 1
+- name: Merchant
+  set: 2
+  copies: 3
+- name: Monkey
+  set: 3
+  copies: 1
+- name: Morgiv
+  set: 6
+  copies: 1
+- name: Mountaineer
+  set: 6
+  copies: 3
+- name: Night Watch
+  set: B
+  copies: 3
+- name: Poog of Zarongel
+  set: P
+  copies: 1
+- name: Pyromaniac Mage
+  set: 5
+  copies: 2
+- name: Saber-Toothed Tiger
+  set: C
+  copies: 1
+- name: Sacred Killer
+  set: 5
+  copies: 2
+- name: Sage
+  set: B
+  copies: 3
+- name: Shalelu Andosana
+  set: B
+  copies: 1
+- name: Shaman
+  set: 5
+  copies: 1
+- name: Sheriff Hemlock
+  set: B
+  copies: 1
+- name: Snake
+  set: C
+  copies: 2
+- name: Soldier
+  set: B
+  copies: 3
+- name: Soldier
+  set: C
+  copies: 1
+- name: Standard Bearer
+  set: B
+  copies: 4
+- name: Svevenka
+  set: 6
+  copies: 1
+- name: Toad
+  set: 1
+  copies: 2
+- name: Troubadour
+  set: B
+  copies: 2
+- name: Troubadour
+  set: C
+  copies: 1
+- name: Vale Temros
+  set: 3
+  copies: 1
+- name: Velociraptor
+  set: 5
+  copies: 1
+- name: Ven Vinder
+  set: 1
+  copies: 1
+- name: Yap the Pixie
+  set: 3
+  copies: 1
+- name: Zuvuzeg
+  set: 5
+  copies: 1

@@ -1,0 +1,198 @@
+- name: Acidic Sling +3
+  set: 5
+  copies: 1
+- name: Allying Dart +1
+  set: C
+  copies: 1
+- name: Bastard Sword
+  set: B
+  copies: 1
+- name: Bastard Sword +1
+  set: 1
+  copies: 1
+- name: Battleaxe
+  set: B
+  copies: 1
+- name: Dagger
+  set: B
+  copies: 2
+- name: Dagger
+  set: C
+  copies: 1
+- name: Dagger +1
+  set: 1
+  copies: 2
+- name: Dancing Scimitar +2
+  set: 5
+  copies: 2
+- name: Dart
+  set: B
+  copies: 1
+- name: Deathbane Light Crossbow +1
+  set: C
+  copies: 1
+- name: Dogslicer
+  set: 1
+  copies: 2
+- name: Dogslicer +1
+  set: 1
+  copies: 1
+- name: Flaming Icy Axe +1
+  set: 6
+  copies: 2
+- name: Flaming Mace +1
+  set: B
+  copies: 1
+- name: Flaming Ranseur +3
+  set: 5
+  copies: 2
+- name: Force Sling +3
+  set: 6
+  copies: 2
+- name: Frost Longbow +1
+  set: 3
+  copies: 2
+- name: Giantbane Dagger +1
+  set: 4
+  copies: 2
+- name: Glaive
+  set: B
+  copies: 1
+- name: Glaive
+  set: C
+  copies: 1
+- name: Greataxe
+  set: B
+  copies: 1
+- name: Greatclub +3
+  set: 4
+  copies: 2
+- name: Greatsword
+  set: C
+  copies: 1
+- name: Heavy Crossbow
+  set: B
+  copies: 2
+- name: Heavy Pick +1
+  set: 2
+  copies: 2
+- name: Horsechopper +1
+  set: P
+  copies: 1
+- name: Icy Longspear +1
+  set: C
+  copies: 1
+- name: Light Crossbow
+  set: B
+  copies: 2
+- name: Light Crossbow
+  set: C
+  copies: 1
+- name: Light Crossbow +1
+  set: 2
+  copies: 1
+- name: Longbow
+  set: B
+  copies: 1
+- name: Longbow
+  set: C
+  copies: 1
+- name: Longbow +1
+  set: 1
+  copies: 2
+- name: Longspear
+  set: B
+  copies: 1
+- name: Longsword
+  set: B
+  copies: 4
+- name: Longsword +1
+  set: B
+  copies: 1
+- name: Longsword +2
+  set: 3
+  copies: 2
+- name: Mace
+  set: B
+  copies: 3
+- name: Quarterstaff
+  set: B
+  copies: 3
+- name: Returning Frost Spear +2
+  set: 6
+  copies: 2
+- name: Returning Throwing Axe +1
+  set: B
+  copies: 1
+- name: Runechill Hatchet +2
+  set: 4
+  copies: 2
+- name: Scimitar
+  set: B
+  copies: 1
+- name: Scimitar
+  set: C
+  copies: 1
+- name: Scythe +1
+  set: 2
+  copies: 2
+- name: Shock Greatsword +2
+  set: 6
+  copies: 2
+- name: Shock Longbow +1
+  set: B
+  copies: 1
+- name: Short Sword
+  set: B
+  copies: 3
+- name: Short Sword
+  set: C
+  copies: 1
+- name: Short Sword +1
+  set: 1
+  copies: 2
+- name: Shortbow
+  set: B
+  copies: 2
+- name: Shortbow
+  set: C
+  copies: 1
+- name: Shortspear +3
+  set: 4
+  copies: 2
+- name: Sickle +1
+  set: 2
+  copies: 1
+- name: Sling
+  set: B
+  copies: 2
+- name: Spiked Chain
+  set: B
+  copies: 1
+- name: Starknife
+  set: B
+  copies: 1
+- name: Throwing Axe
+  set: B
+  copies: 1
+- name: Venomous Dagger +2
+  set: 3
+  copies: 2
+- name: Venomous Heavy Crossbow +2
+  set: 5
+  copies: 2
+- name: Vicious Trident +1
+  set: 3
+  copies: 2
+- name: War Razor +1
+  set: 2
+  copies: 2
+- name: Warhammer
+  set: B
+  copies: 1
+- name: Warhammer
+  set: C
+  copies: 1
+- name: Warhammer +1
+  set: B
+  copies: 1

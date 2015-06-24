@@ -1,0 +1,180 @@
+- name: Acid Arrow
+  set: B
+  copies: 2
+- name: Acid Arrow
+  set: C
+  copies: 1
+- name: Aid
+  set: B
+  copies: 1
+- name: Aid
+  set: C
+  copies: 1
+- name: Arcane Armor
+  set: B
+  copies: 3
+- name: Augury
+  set: B
+  copies: 2
+- name: Augury
+  set: C
+  copies: 1
+- name: Bewilder
+  set: 6
+  copies: 2
+- name: Blizzard
+  set: 5
+  copies: 2
+- name: Charm Person
+  set: B
+  copies: 1
+- name: Consecration
+  set: 2
+  copies: 2
+- name: Corrosive Storm
+  set: 6
+  copies: 2
+- name: Cure
+  set: B
+  copies: 3
+- name: Cure
+  set: C
+  copies: 2
+- name: Detect Evil
+  set: B
+  copies: 2
+- name: Detect Evil
+  set: C
+  copies: 1
+- name: Detect Magic
+  set: B
+  copies: 3
+- name: Disintegrate
+  set: 5
+  copies: 2
+- name: Dominate
+  set: 6
+  copies: 2
+- name: Enfeeble
+  set: 1
+  copies: 2
+- name: Fiery Weapon
+  set: 1
+  copies: 2
+- name: Find Traps
+  set: B
+  copies: 1
+- name: Find Traps
+  set: C
+  copies: 1
+- name: Fire Sneeze
+  set: P
+  copies: 1
+- name: Force Missile
+  set: B
+  copies: 3
+- name: Frost Ray
+  set: 1
+  copies: 2
+- name: Glibness
+  set: B
+  copies: 1
+- name: Guidance
+  set: B
+  copies: 2
+- name: Haste
+  set: 2
+  copies: 2
+- name: Holy Light
+  set: B
+  copies: 2
+- name: Incendiary
+  set: 3
+  copies: 2
+- name: Inflict
+  set: B
+  copies: 1
+- name: Inflict
+  set: C
+  copies: 1
+- name: Invisibility
+  set: B
+  copies: 2
+- name: Invoke
+  set: 6
+  copies: 2
+- name: Levitate
+  set: B
+  copies: 2
+- name: Lighting Bolt
+  set: 2
+  copies: 2
+- name: Lightning Touch
+  set: B
+  copies: 2
+- name: Lightning Touch
+  set: C
+  copies: 1
+- name: Major Cure
+  set: 3
+  copies: 2
+- name: Mass Cure
+  set: 4
+  copies: 2
+- name: Mending
+  set: B
+  copies: 1
+- name: Mending
+  set: C
+  copies: 1
+- name: Mirror Image
+  set: B
+  copies: 2
+- name: Poison Blast
+  set: 4
+  copies: 2
+- name: Raise Dead
+  set: 5
+  copies: 2
+- name: Restoration
+  set: 4
+  copies: 2
+- name: Sanctuary
+  set: B
+  copies: 1
+- name: Sanctuary
+  set: C
+  copies: 1
+- name: Scorching Ray
+  set: 1
+  copies: 2
+- name: Scrying
+  set: 3
+  copies: 2
+- name: Sleep
+  set: B
+  copies: 2
+- name: Sign of Wrath
+  set: 6
+  copies: 2
+- name: Speed
+  set: 1
+  copies: 2
+- name: Strength
+  set: B
+  copies: 1
+- name: Strength
+  set: C
+  copies: 1
+- name: Swipe
+  set: 3
+  copies: 2
+- name: Teleport
+  set: 4
+  copies: 2
+- name: Toxic Cloud
+  set: 2
+  copies: 2
+- name: Web
+  set: 2
+  copies: 2

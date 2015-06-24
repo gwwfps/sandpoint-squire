@@ -1,0 +1,111 @@
+- name: Arkryst
+  set: 5
+  copies: 1
+- name: Azaven
+  set: 5
+  copies: 1
+- name: Barl Breakbones
+  set: 3
+  copies: 1
+- name: Black Fang
+  set: B
+  copies: 1
+- name: Black Magga
+  set: 3
+  copies: 1
+- name: Caizarlu Zerren
+  set: 2
+  copies: 1
+- name: Erylium
+  set: 1
+  copies: 1
+- name: Galenmir
+  set: 4
+  copies: 1
+- name: Ghlorofaex
+  set: 6
+  copies: 1
+- name: Gogmurt
+  set: 1
+  copies: 1
+- name: Iesha Foxglove
+  set: 2
+  copies: 1
+- name: Jaagrath Kreeg
+  set: 3
+  copies: 1
+- name: Jordimandus
+  set: 5
+  copies: 1
+- name: Jubrayl Vhiski
+  set: B
+  copies: 1
+- name: Justice Ironbriar
+  set: 2
+  copies: 1
+- name: Karzoug Statute
+  set: 5
+  copies: 1
+- name: Karzoug the Claimer
+  set: 6
+  copies: 1
+- name: Malugus Kreeg
+  set: 3
+  copies: 1
+- name: Mammy Graul
+  set: 3
+  copies: 1
+- name: Mistress Delvahine
+  set: 5
+  copies: 1
+- name: Mokmurian
+  set: 4
+  copies: 1
+- name: Most High Ceoptra
+  set: 6
+  copies: 1
+- name: Nualia
+  set: 1
+  copies: 1
+- name: Ordikon
+  set: 5
+  copies: 1
+- name: Pillbug Podicker
+  set: B
+  copies: 1
+- name: Ripnugget and Stickfoot
+  set: 1
+  copies: 1
+- name: Rogors Craesby
+  set: 2
+  copies: 1
+- name: Seleval
+  set: 4
+  copies: 1
+- name: Teraktinus
+  set: 4
+  copies: 1
+- name: The Black Monk
+  set: 4
+  copies: 1
+- name: The Sandpoint Devil
+  set: 1
+  copies: 1
+- name: The Scribbler
+  set: 5
+  copies: 1
+- name: The Skinsaw Man
+  set: 2
+  copies: 1
+- name: The Thing From Beyond Time
+  set: 6
+  copies: 1
+- name: Wendingo
+  set: 6
+  copies: 1
+- name: Xanesha
+  set: 2
+  copies: 1
+- name: Zaelsar
+  set: 4
+  copies: 1

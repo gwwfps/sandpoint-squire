@@ -1,0 +1,84 @@
+- name: Blessing of Abadar
+  set: 2
+  copies: 5
+- name: Blessing of Calistria
+  set: B
+  copies: 4
+- name: Blessing of Calistria
+  set: C
+  copies: 1
+- name: Blessing of Desna
+  set: B
+  copies: 4
+- name: Blessing of Desna
+  set: C
+  copies: 1
+- name: Blessing of Erastil
+  set: B
+  copies: 4
+- name: Blessing of Erastil
+  set: C
+  copies: 1
+- name: Blessing of Gorum
+  set: B
+  copies: 4
+- name: Blessing of Gorum
+  set: C
+  copies: 1
+- name: Blessing of Gorzreh
+  set: 4
+  copies: 5
+- name: Blessing of Iomedae
+  set: B
+  copies: 4
+- name: Blessing of Iomedae
+  set: C
+  copies: 1
+- name: Blessing of Irori
+  set: B
+  copies: 4
+- name: Blessing of Irori
+  set: C
+  copies: 1
+- name: Blessing of Lamashtu
+  set: 1
+  copies: 5
+- name: Blessing of Nethys
+  set: 6
+  copies: 5
+- name: Blessing of Norgorber
+  set: 3
+  copies: 5
+- name: Blessing of Pharasma
+  set: B
+  copies: 4
+- name: Blessing of Pharasma
+  set: C
+  copies: 1
+- name: Blessing of Sarenrae
+  set: B
+  copies: 4
+- name: Blessing of Sarenrae
+  set: C
+  copies: 1
+- name: Blessing of Shelyn
+  set: B
+  copies: 4
+- name: Blessing of Shelyn
+  set: C
+  copies: 1
+- name: Blessing of the Gods
+  set: B
+  copies: 32
+- name: Blessing of the Gods
+  set: C
+  copies: 5
+- name: Blessing of Torag
+  set: B
+  copies: 4
+- name: Blessing of Torag
+  set: C
+  copies: 1
+- name: Blessing of Zarongel
+  set: P
+  copies: 1
