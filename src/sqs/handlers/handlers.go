@@ -1,12 +1,22 @@
 package handlers
 
+import (
+	"math/rand"
+	"time"
+)
+
 type MessageHandler interface {
 	ShouldHandle(msg string) bool
 	Handle(msg string) string
 }
 
 var handlers = []MessageHandler{
-	&CharacterSelectionHandler{},
+	&CardDrawHandler{},
+	&FallbackHandler{},
+}
+
+func init() {
+	rand.Seed(time.Now().UTC().UnixNano())
 }
 
 func HandleMessage(msg string) string {

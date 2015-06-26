@@ -55,3 +55,20 @@ func (message *IncomingMessage) UnmarshalJSON(data []byte) error {
 func (chatMsg *ChatMessage) IsDirect() bool {
 	return strings.HasPrefix(chatMsg.ChannelId, "D")
 }
+
+func (chatMsg *ChatMessage) IsGroup() bool {
+	return strings.HasPrefix(chatMsg.ChannelId, "G")
+}
+
+func (chatMsg *ChatMessage) RealBody() string {
+	body := ""
+	if chatMsg.IsDirect() {
+		body = chatMsg.Body
+	} else if chatMsg.IsGroup() {
+		botHandle := ConnectionContext.Bot.AtHandle()
+		if strings.HasPrefix(chatMsg.Body, botHandle) {
+			body = chatMsg.Body[len(botHandle):]
+		}
+	}
+	return strings.Trim(body, " :\n")
+}

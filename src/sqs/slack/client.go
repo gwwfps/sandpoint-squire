@@ -19,19 +19,24 @@ var LimitReachedError = errors.New("Error limit reached, terminating connection.
 var ConnectionClosedError = errors.New("Connection closed by server.")
 
 type StartState struct {
-	WsUrl string `json:"url"`
+	WsUrl string   `json:"url"`
+	Bot   BotState `json:"self"`
 }
+
+var ConnectionContext StartState
 
 func Connect(token string) error {
 	startState, err := initiateRtm(token)
+	ConnectionContext = *startState
 	if err != nil {
 		return err
 	}
 
-	log.Println("Acquired RTM Websocket URL:", startState.WsUrl)
+	log.Println("Acquired RTM Websocket URL:", ConnectionContext.WsUrl)
+	log.Printf("Bot state: %+v", ConnectionContext.Bot)
 	log.Println("Attempting to initiate connection...")
 
-	err = listenOnSocket(startState.WsUrl)
+	err = listenOnSocket(ConnectionContext.WsUrl)
 	if err != nil {
 		return err
 	}
@@ -110,8 +115,16 @@ func processMessage(conn *websocket.Conn) error {
 		switch message.Type {
 		case MessageEvent:
 			chatMessage := message.Inner.(ChatMessage)
-			if chatMessage.IsDirect() {
-				response := handlers.HandleMessage(chatMessage.Body)
+			body := chatMessage.RealBody()
+			if body != "" {
+				log.Println("Parsed message content:", body)
+
+				response := handlers.HandleMessage(body)
+
+				if response == "" {
+					log.Println("Empty response, ignoring.")
+					return nil
+				}
 
 				log.Println("Responding:", response)
 
@@ -128,7 +141,7 @@ func processMessage(conn *websocket.Conn) error {
 					return common.AppendError("Error responding to message:", err)
 				}
 			} else {
-				log.Println("Non-direct message cannot be handled yet, ignoring.")
+				log.Println("Message cannot be handled yet, ignoring.")
 			}
 		default:
 			log.Println("Cannot handle message event type, ignoring.")
