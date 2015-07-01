@@ -1,4 +1,4 @@
-package slack
+package api
 
 type BotState struct {
 	Id   string `json:"id"`

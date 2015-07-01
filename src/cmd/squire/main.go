@@ -3,8 +3,9 @@ package main
 import (
 	"log"
 	"os"
-	"sqs/slack"
 	"time"
+
+	"squire/slack"
 )
 
 func main() {

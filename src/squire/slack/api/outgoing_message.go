@@ -1,4 +1,4 @@
-package slack
+package api
 
 type OutgoingMessage struct {
 	Id        int    `json:"id"`

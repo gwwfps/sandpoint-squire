@@ -4,7 +4,9 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"sqs/handlers"
+
+	"squire/slack"
+	"squire/slack/api"
 )
 
 func main() {
@@ -13,7 +15,7 @@ func main() {
 	for scanner.Scan() {
 		input := scanner.Text()
 		if input != "" {
-			response := handlers.HandleMessage(input)
+			response := slack.HandleMessage(api.ChatMessage{Body: input})
 			fmt.Println(response)
 		}
 		fmt.Print("> ")

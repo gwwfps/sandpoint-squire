@@ -3,14 +3,13 @@ package slack
 import (
 	"encoding/json"
 	"errors"
-	"io/ioutil"
 	"log"
 	"net/http"
 
-	"sqs/common"
-	"sqs/handlers"
-
 	"github.com/gorilla/websocket"
+
+	"squire/common"
+	"squire/slack/api"
 )
 
 const ERROR_LIMIT = 10
@@ -18,50 +17,17 @@ const ERROR_LIMIT = 10
 var LimitReachedError = errors.New("Error limit reached, terminating connection.")
 var ConnectionClosedError = errors.New("Connection closed by server.")
 
-type StartState struct {
-	WsUrl string   `json:"url"`
-	Bot   BotState `json:"self"`
-}
-
-var ConnectionContext StartState
-
 func Connect(token string) error {
-	startState, err := initiateRtm(token)
-	ConnectionContext = *startState
+	err := api.InitiateRtm(token)
 	if err != nil {
 		return err
 	}
 
-	log.Println("Acquired RTM Websocket URL:", ConnectionContext.WsUrl)
-	log.Printf("Bot state: %+v", ConnectionContext.Bot)
+	log.Println("Acquired RTM Websocket URL:", api.ConnState.WsUrl)
+	log.Printf("Bot state: %+v", api.ConnState.Bot)
 	log.Println("Attempting to initiate connection...")
 
-	err = listenOnSocket(ConnectionContext.WsUrl)
-	if err != nil {
-		return err
-	}
-
-	return nil
-}
-
-func initiateRtm(token string) (*StartState, error) {
-	response, err := http.Get("https://slack.com/api/rtm.start?token=" + token)
-	if err != nil {
-		return nil, common.AppendError("Cannot reach Slack API for initiation of RTM session:", err)
-	}
-
-	defer response.Body.Close()
-
-	startState := StartState{}
-
-	body, err := ioutil.ReadAll(response.Body)
-	if err != nil {
-		return nil, common.AppendError("Cannot read RTM initiation response:", err)
-	}
-
-	json.Unmarshal(body, &startState)
-
-	return &startState, nil
+	return listenOnSocket(api.ConnState.WsUrl)
 }
 
 func listenOnSocket(url string) error {
@@ -106,20 +72,19 @@ func processMessage(conn *websocket.Conn) error {
 	case websocket.TextMessage:
 		log.Println("Message body:", string(data))
 
-		message := IncomingMessage{}
+		message := api.IncomingMessage{}
 		err = message.UnmarshalJSON(data)
 		if err != nil {
 			return err
 		}
 
 		switch message.Type {
-		case MessageEvent:
-			chatMessage := message.Inner.(ChatMessage)
-			body := chatMessage.RealBody()
-			if body != "" {
-				log.Println("Parsed message content:", body)
+		case api.MessageEvent:
+			chatMessage := message.Inner.(api.ChatMessage)
+			if chatMessage.Body != "" {
+				log.Println("Parsed message content:", chatMessage.Body)
 
-				response := handlers.HandleMessage(body)
+				response := HandleMessage(chatMessage)
 
 				if response == "" {
 					log.Println("Empty response, ignoring.")
@@ -128,7 +93,7 @@ func processMessage(conn *websocket.Conn) error {
 
 				log.Println("Responding:", response)
 
-				replyMessage := NewOutgoingMessage(chatMessage.ChannelId, response)
+				replyMessage := api.NewOutgoingMessage(chatMessage.ChannelId, response)
 				replyData, err := json.Marshal(replyMessage)
 				if err != nil {
 					return common.AppendError("Error marshalling reply:", err)

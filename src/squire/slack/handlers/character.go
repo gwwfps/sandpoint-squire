@@ -8,5 +8,5 @@ func (c *CharacterSelectionHandler) ShouldHandle(msg string) bool {
 }
 
 func (c *CharacterSelectionHandler) Handle(msg string) string {
-	return "hello"
+	return msg
 }
