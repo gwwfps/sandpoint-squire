@@ -1,11 +1,9 @@
 package pacg
 
 import (
-	"io/ioutil"
-	"log"
 	"math/rand"
 
-	"gopkg.in/yaml.v2"
+	"squire/common"
 )
 
 type Card struct {
@@ -30,39 +28,25 @@ const (
 	WEAPON
 )
 
-var CardStore [][]Card
+var CardStore = make([][]Card, WEAPON+1)
 
 func init() {
-	CardStore = make([][]Card, WEAPON+1)
-
-	populate("allies.yaml", ALLY)
-	populate("armors.yaml", ARMOR)
-	populate("barriers.yaml", BARRIER)
-	populate("blessings.yaml", BLESSING)
-	populate("henchmen.yaml", HENCHMAN)
-	populate("items.yaml", ITEM)
-	populate("loots.yaml", LOOT)
-	populate("monsters.yaml", MONSTER)
-	populate("spells.yaml", SPELL)
-	populate("villains.yaml", VILLAIN)
-	populate("weapons.yaml", WEAPON)
+	populateCards("allies.yaml", ALLY)
+	populateCards("armors.yaml", ARMOR)
+	populateCards("barriers.yaml", BARRIER)
+	populateCards("blessings.yaml", BLESSING)
+	populateCards("henchmen.yaml", HENCHMAN)
+	populateCards("items.yaml", ITEM)
+	populateCards("loots.yaml", LOOT)
+	populateCards("monsters.yaml", MONSTER)
+	populateCards("spells.yaml", SPELL)
+	populateCards("villains.yaml", VILLAIN)
+	populateCards("weapons.yaml", WEAPON)
 }
 
-func populate(fileName string, cardType CardType) {
+func populateCards(fileName string, cardType CardType) {
 	var cards []Card
-
-	content, err := ioutil.ReadFile("./data/cards/" + fileName)
-
-	if err == nil {
-		err = yaml.Unmarshal(content, &cards)
-	}
-
-	if err != nil {
-		log.Fatalln("Cannot read data file", fileName, err)
-	}
-
-	log.Printf("Read %d cards from %s.\n", len(cards), fileName)
-
+	common.UnmarshalYAML("cards/"+fileName, &cards)
 	CardStore[cardType] = cards
 }
 

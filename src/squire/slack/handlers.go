@@ -1,31 +1,29 @@
 package slack
 
 import (
-	"math/rand"
-	"time"
-
+	"log"
 	"squire/slack/api"
 	"squire/slack/handlers"
 )
 
 type MessageHandler interface {
-	ShouldHandle(msg api.ChatMessage) bool
-	Handle(msg api.ChatMessage) string
+	Handle(msg api.ChatMessage) (bool, string, error)
 }
 
 var messageHandlers = []MessageHandler{
-	&handlers.CardDrawHandler{},
+	handlers.NewCardDrawHandler(),
+	handlers.NewCharSelHandler(),
 	&handlers.FallbackHandler{},
-}
-
-func init() {
-	rand.Seed(time.Now().UTC().UnixNano())
 }
 
 func HandleMessage(msg api.ChatMessage) string {
 	for _, handler := range messageHandlers {
-		if handler.ShouldHandle(msg) {
-			return handler.Handle(msg)
+		if shouldHandle, result, err := handler.Handle(msg); shouldHandle {
+			if err != nil {
+				log.Println("Error handling message:", err)
+				return "Internal error, consult logs."
+			}
+			return result
 		}
 	}
 

@@ -8,22 +8,27 @@ import (
 )
 
 type CardDrawHandler struct {
+	prefix string
 }
 
-var drawCardPrefix = "draw "
-
-func (c *CardDrawHandler) ShouldHandle(msg api.ChatMessage) bool {
-	return strings.HasPrefix(msg.Body, drawCardPrefix)
+func NewCardDrawHandler() *CardDrawHandler {
+	return &CardDrawHandler{prefix: "draw "}
 }
 
-func (c *CardDrawHandler) Handle(msg api.ChatMessage) string {
-	command := msg.Body[len(drawCardPrefix):]
+func (c *CardDrawHandler) Handle(msg api.ChatMessage) (bool, string, error) {
+	if !strings.HasPrefix(msg.Body, c.prefix) {
+		return false, "", nil
+	}
+
+	command := msg.Body[len(c.prefix):]
 
 	switch {
 	case strings.HasPrefix(command, "card"):
 		card := pacg.RandomCard()
-		return card.Name
+		if card != nil {
+			return true, card.Name, nil
+		}
 	}
 
-	return ""
+	return false, "", nil
 }
