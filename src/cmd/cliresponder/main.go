@@ -15,7 +15,11 @@ func main() {
 	for scanner.Scan() {
 		input := scanner.Text()
 		if input != "" {
-			response := slack.HandleMessage(api.ChatMessage{Body: input, ChannelId: "D1234"})
+			response := slack.HandleMessage(api.ChatMessage{
+				Body:      input,
+				ChannelId: "D1234",
+				UserId:    "U4321",
+			})
 			fmt.Println(response)
 		}
 		fmt.Print("> ")

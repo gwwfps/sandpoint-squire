@@ -1,6 +1,7 @@
 package pacg
 
 import (
+	"errors"
 	"fmt"
 	"squire/common"
 	"strings"
@@ -27,7 +28,6 @@ func init() {
 
 func FindCharacter(fuzzyId string) *Character {
 	lowerFuzzyId := strings.ToLower(fuzzyId)
-
 	for _, char := range CharacterStore {
 		criteria := []string{char.Name, char.Class}
 		for _, criterion := range criteria {
@@ -36,12 +36,29 @@ func FindCharacter(fuzzyId string) *Character {
 			}
 		}
 	}
-
 	return nil
 }
 
-func (char Character) SetOwner(ownerId string) {
+func IsCharacterOwner(userId string) (bool, error) {
+	rconn, err := common.RedisPool.Dial()
+	if err == nil {
+		result, err := rconn.Do("SISMEMBER", "owners", userId)
+		if err == nil && result == int64(1) {
+			return true, nil
+		}
+	}
+	return false, err
+}
 
+func (char Character) SetOwnerId(ownerId string) error {
+	rconn, err := common.RedisPool.Dial()
+	if err == nil {
+		_, err = rconn.Do("SET", char.ownerKey(), ownerId)
+		if err == nil {
+			_, err = rconn.Do("SADD", "owners", ownerId)
+		}
+	}
+	return err
 }
 
 func (char Character) GetOwnerId() (string, error) {
@@ -50,8 +67,15 @@ func (char Character) GetOwnerId() (string, error) {
 		return "", err
 	}
 
-	ownerId, err := rconn.Do("GET", char.ownerKey())
-	return ownerId.(string), err
+	result, err := rconn.Do("GET", char.ownerKey())
+	if err != nil {
+		return "", err
+	}
+	if ownerId, ok := result.(string); ok {
+		return ownerId, nil
+	} else {
+		return "", errors.New(fmt.Sprintf("Unknown response to GET %s: %+v", char.ownerKey(), result))
+	}
 }
 
 func (char Character) ownerKey() string {
@@ -59,7 +83,5 @@ func (char Character) ownerKey() string {
 }
 
 func (char Character) Description() string {
-	desc := fmt.Sprintf("%s the %s %s %s", char.Name, char.Gender, char.Race, char.Class)
-
-	return desc
+	return fmt.Sprintf("%s the %s %s %s", char.Name, char.Gender, char.Race, char.Class)
 }

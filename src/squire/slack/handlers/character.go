@@ -23,17 +23,36 @@ func (c *CharSelHandler) Handle(msg api.ChatMessage) (bool, string, error) {
 
 	matches := c.regex.FindStringSubmatch(msg.Body)
 	if matches != nil {
+		isOwner, err := pacg.IsCharacterOwner(msg.UserId)
+		if err == nil {
+			if isOwner {
+				return true, "You have already chosen a character.", nil
+			}
+		} else {
+			return true, "", err
+		}
+
 		fuzzyCharId := matches[1]
 		char := pacg.FindCharacter(fuzzyCharId)
 
-		var reply string
+		reply := ""
 		if char == nil {
-			reply = fmt.Sprintf("Class %s not found.", fuzzyCharId)
+			reply = fmt.Sprintf("Character _%s_ not found.", fuzzyCharId)
 		} else {
-			reply = fmt.Sprintf("Class set to %s.", char.Description())
+			ownerId, err := char.GetOwnerId()
+			if err == nil {
+				if ownerId == "" {
+					err = char.SetOwnerId(msg.UserId)
+				} else {
+					reply = "Character is already bound to a player."
+				}
+			}
+			if err == nil {
+				reply = fmt.Sprintf("Character set to _%s_.", char.Description())
+			}
 		}
 
-		return true, reply, nil
+		return true, reply, err
 	}
 
 	return false, "", nil
