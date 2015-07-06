@@ -39,5 +39,5 @@ func (chatMsg *ChatMessage) parseBody() {
 			body = chatMsg.Body[len(botHandle):]
 		}
 	}
-	chatMsg.Body = strings.Trim(body, " :\n")
+	chatMsg.Body = strings.ToLower(strings.Trim(body, " :\n"))
 }

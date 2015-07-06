@@ -13,6 +13,7 @@ type MessageHandler interface {
 var messageHandlers = []MessageHandler{
 	handlers.NewCardDrawHandler(),
 	handlers.NewCharSelHandler(),
+	handlers.NewCharSkillsHandler(),
 	&handlers.FallbackHandler{},
 }
 

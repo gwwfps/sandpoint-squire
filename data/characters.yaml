@@ -3,53 +3,283 @@
   gender: Male
   race: Human
   class: Wizard
+  skills:
+  - name: Strength
+    dice: 6
+  - name: Dexterity
+    dice: 6
+  - name: Constitution
+    dice: 4
+  - name: Intelligence
+    dice: 12
+  - name: Wisdom
+    dice: 8
+  - name: Charisma
+    dice: 6
+  - name: Arcane
+    base: Intelligence
+    bonus: 2
+  - name: Knowledge
+    base: Intelligence
+    bonus: 2
 - key: RANGER
   name: Harsk
   gender: Male
   race: Dwarf
   class: Ranger
+  skills:
+  - name: Strength
+    dice: 6
+  - name: Dexterity
+    dice: 8
+  - name: Constitution
+    dice: 12
+  - name: Intelligence
+    dice: 6
+  - name: Wisdom
+    dice: 6
+  - name: Charisma
+    dice: 4
+  - name: Ranged
+    base: Dexterity
+    bonus: 3
+  - name: Fortitude
+    base: Constitution
+    bonus: 2
+  - name: Perception
+    base: Wisdom
+    bonus: 2
+  - name: Survival
+    base: Wisdom
+    bonus: 2
 - key: CLERIC
   name: Kyra
   gender: Female
   race: Human
   class: Cleric
+  skills:
+  - name: Strength
+    dice: 6
+  - name: Dexterity
+    dice: 4
+  - name: Constitution
+    dice: 6
+  - name: Intelligence
+    dice: 6
+  - name: Wisdom
+    dice: 12
+  - name: Charisma
+    dice: 6
+  - name: Melee
+    base: Strength
+    bonus: 2
+  - name: Fortitude
+    base: Constitution
+    bonus: 3
+  - name: Divine
+    base: Wisdom
+    bonus: 2
 - key: BARD
   name: Lem
   gender: Male
   race: Halfling
   class: Bard
+  skills:
+  - name: Strength
+    dice: 4
+  - name: Dexterity
+    dice: 8
+  - name: Constitution
+    dice: 6
+  - name: Intelligence
+    dice: 6
+  - name: Wisdom
+    dice: 6
+  - name: Charisma
+    dice: 10
+  - name: Arcane
+    base: Charisma
+    bonus: 1
+  - name: Diplomacy
+    base: Charisma
+    bonus: 3
+  - name: Divine
+    base: Charisma
+    bonus: 1
 - key: ROGUE
   name: Merisiel
   gender: Female
   race: Elf
   class: Rogue
+  skills:
+  - name: Strength
+    dice: 8
+  - name: Dexterity
+    dice: 12
+  - name: Constitution
+    dice: 6
+  - name: Intelligence
+    dice: 4
+  - name: Wisdom
+    dice: 6
+  - name: Charisma
+    dice: 6
+  - name: Acrobatics
+    base: Dexterity
+    bonus: 2
+  - name: Disable
+    base: Dexterity
+    bonus: 2
+  - name: Stealth
+    base: Dexterity
+    bonus: 2
+  - name: Perception
+    base: Wisdom
+    bonus: 2
 - key: SORCERER
   name: Seoni
   gender: Female
   race: Human
   class: Sorcerer
+  skills:
+  - name: Strength
+    dice: 4
+  - name: Dexterity
+    dice: 8
+  - name: Constitution
+    dice: 6
+  - name: Intelligence
+    dice: 6
+  - name: Wisdom
+    dice: 6
+  - name: Charisma
+    dice: 12
+  - name: Diplomacy
+    base: Charisma
+    bonus: 2
+  - name: Arcane
+    base: Charisma
+    bonus: 2
 - key: FIGHTER
   name: Valeros
   gender: Male
   race: Human
   class: Fighter
+  skills:
+  - name: Strength
+    dice: 10
+  - name: Dexterity
+    dice: 8
+  - name: Constitution
+    dice: 8
+  - name: Intelligence
+    dice: 6
+  - name: Wisdom
+    dice: 4
+  - name: Charisma
+    dice: 6
+  - name: Diplomacy
+    base: Charisma
+    bonus: 2
+  - name: Melee
+    base: Strength
+    bonus: 3
 - key: BARBARIAN
   name: Amiri
   gender: Female
   race: Human
   class: Barbarian
+  skills:
+  - name: Strength
+    dice: 12
+  - name: Dexterity
+    dice: 6
+  - name: Constitution
+    dice: 8
+  - name: Intelligence
+    dice: 4
+  - name: Wisdom
+    dice: 6
+  - name: Charisma
+    dice: 6
+  - name: Melee
+    base: Strength
+    bonus: 2
+  - name: Survival
+    base: Wisdom
+    bonus: 3
 - key: DRUID
   name: Lini
   gender: Female
   race: Gnome
   class: Druid
+  skills:
+  - name: Strength
+    dice: 4
+  - name: Dexterity
+    dice: 6
+  - name: Constitution
+    dice: 8
+  - name: Intelligence
+    dice: 6
+  - name: Wisdom
+    dice: 10
+  - name: Charisma
+    dice: 8
+  - name: Knowledge
+    base: Intelligence
+    bonus: 3
+  - name: Divine
+    base: Wisdom
+    bonus: 1
+  - name: Survival
+    base: Wisdom
+    bonus: 2
 - key: MONK
   name: Sajan
   gender: Male
   race: Human
   class: Monk
+  skills:
+  - name: Strength
+    dice: 6
+  - name: Dexterity
+    dice: 10
+  - name: Constitution
+    dice: 6
+  - name: Intelligence
+    dice: 6
+  - name: Wisdom
+    dice: 8
+  - name: Charisma
+    dice: 6
+  - name: Acrobatics
+    base: Dexterity
+    bonus: 2
+  - name: Fortitude
+    base: Constitution
+    bonus: 2
 - key: PALADIN
   name: Seelah
   gender: Female
   race: Human
   class: Paladin
+  skills:
+  - name: Strength
+    dice: 8
+  - name: Dexterity
+    dice: 4
+  - name: Constitution
+    dice: 8
+  - name: Intelligence
+    dice: 4
+  - name: Wisdom
+    dice: 8
+  - name: Charisma
+    dice: 10
+  - name: Melee
+    base: Strength
+    bonus: 2
+  - name: Divine
+    base: Wisdom
+    bonus: 2

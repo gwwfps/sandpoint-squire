@@ -1,10 +1,11 @@
 package pacg
 
 import (
-	"errors"
 	"fmt"
 	"squire/common"
 	"strings"
+
+	"github.com/garyburd/redigo/redis"
 )
 
 type Character struct {
@@ -13,6 +14,14 @@ type Character struct {
 	Gender string
 	Race   string
 	Class  string
+	Skills []CharSkill
+}
+
+type CharSkill struct {
+	Name  string
+	Dice  byte
+	Base  string
+	Bonus byte
 }
 
 var CharacterStore = map[string]Character{}
@@ -39,47 +48,47 @@ func FindCharacter(fuzzyId string) *Character {
 	return nil
 }
 
-func IsCharacterOwner(userId string) (bool, error) {
-	rconn, err := common.RedisPool.Dial()
-	if err == nil {
-		result, err := rconn.Do("SISMEMBER", "owners", userId)
-		if err == nil && result == int64(1) {
-			return true, nil
+func FindOwnedCharacter(userId string) (*Character, error) {
+	if rconn, err := common.RedisPool.Dial(); err == nil {
+		if result, err := redis.String(rconn.Do("GET", charKey(userId))); err == nil {
+			if char, ok := CharacterStore[result]; ok {
+				return &char, nil
+			} else {
+				return nil, nil
+			}
+		} else {
+			return nil, err
 		}
+	} else {
+		return nil, err
 	}
-	return false, err
 }
 
 func (char Character) SetOwnerId(ownerId string) error {
 	rconn, err := common.RedisPool.Dial()
 	if err == nil {
-		_, err = rconn.Do("SET", char.ownerKey(), ownerId)
-		if err == nil {
-			_, err = rconn.Do("SADD", "owners", ownerId)
-		}
+		rconn.Send("MULTI")
+		rconn.Send("SET", char.ownerKey(), ownerId)
+		rconn.Send("SET", charKey(ownerId), char.Key)
+		_, err = rconn.Do("EXEC")
 	}
 	return err
 }
 
 func (char Character) GetOwnerId() (string, error) {
-	rconn, err := common.RedisPool.Dial()
-	if err != nil {
-		return "", err
-	}
-
-	result, err := rconn.Do("GET", char.ownerKey())
-	if err != nil {
-		return "", err
-	}
-	if ownerId, ok := result.(string); ok {
-		return ownerId, nil
+	if rconn, err := common.RedisPool.Dial(); err == nil {
+		return redis.String(rconn.Do("GET", char.ownerKey()))
 	} else {
-		return "", errors.New(fmt.Sprintf("Unknown response to GET %s: %+v", char.ownerKey(), result))
+		return "", err
 	}
 }
 
 func (char Character) ownerKey() string {
 	return "owner:" + char.Key
+}
+
+func charKey(ownerId string) string {
+	return "char:" + ownerId
 }
 
 func (char Character) Description() string {
