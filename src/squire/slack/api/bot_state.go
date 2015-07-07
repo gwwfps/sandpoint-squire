@@ -6,5 +6,5 @@ type BotState struct {
 }
 
 func (bs BotState) AtHandle() string {
-	return "<@" + bs.Id + ">"
+	return AtHandle(bs.Id)
 }

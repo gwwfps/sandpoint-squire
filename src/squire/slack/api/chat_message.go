@@ -1,24 +1,11 @@
 package api
 
-import (
-	"encoding/json"
-	"strings"
-)
+import "strings"
 
 type ChatMessage struct {
 	ChannelId string `json:"channel"`
 	UserId    string `json:"user"`
 	Body      string `json:"text"`
-}
-
-func (message *ChatMessage) UnmarshalJSON(data []byte) error {
-	err := json.Unmarshal(data, message)
-	if err != nil {
-		return err
-	}
-
-	message.parseBody()
-	return nil
 }
 
 func (chatMsg *ChatMessage) IsDirect() bool {
@@ -29,7 +16,7 @@ func (chatMsg *ChatMessage) IsGroup() bool {
 	return strings.HasPrefix(chatMsg.ChannelId, "G")
 }
 
-func (chatMsg *ChatMessage) parseBody() {
+func (chatMsg *ChatMessage) ParseBody() {
 	body := ""
 	if chatMsg.IsDirect() {
 		body = chatMsg.Body

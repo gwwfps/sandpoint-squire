@@ -2,6 +2,8 @@ package handlers
 
 import (
 	"fmt"
+	"strings"
+
 	"squire/pacg"
 	"squire/slack/api"
 )
@@ -28,7 +30,12 @@ func (h *CharSkillsHandler) showSkills(userId string) (string, error) {
 		if char == nil {
 			return "You need to select a character first.", nil
 		} else {
-			return fmt.Sprintf("%+v", char.Skills), nil
+			skills := make([]string, len(char.Skills)+1)
+			skills[0] = fmt.Sprintf("Skills for %s's character _%s_:", api.AtHandle(userId), char.Description())
+			for i, skill := range char.Skills {
+				skills[i+1] = skill.Description()
+			}
+			return strings.Join(skills, "\n"), nil
 		}
 	} else {
 		return "", err

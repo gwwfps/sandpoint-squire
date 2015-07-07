@@ -25,3 +25,11 @@ func newPool() *redis.Pool {
 		},
 	}
 }
+
+func RedisString(reply interface{}, err error) (string, error) {
+	if r, e := redis.String(reply, err); e == nil || e == redis.ErrNil {
+		return r, nil
+	} else {
+		return "", e
+	}
+}

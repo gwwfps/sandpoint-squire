@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"squire/common"
 	"strings"
-
-	"github.com/garyburd/redigo/redis"
 )
 
 type Character struct {
@@ -15,13 +13,6 @@ type Character struct {
 	Race   string
 	Class  string
 	Skills []CharSkill
-}
-
-type CharSkill struct {
-	Name  string
-	Dice  byte
-	Base  string
-	Bonus byte
 }
 
 var CharacterStore = map[string]Character{}
@@ -50,7 +41,7 @@ func FindCharacter(fuzzyId string) *Character {
 
 func FindOwnedCharacter(userId string) (*Character, error) {
 	if rconn, err := common.RedisPool.Dial(); err == nil {
-		if result, err := redis.String(rconn.Do("GET", charKey(userId))); err == nil {
+		if result, err := common.RedisString(rconn.Do("GET", charKey(userId))); err == nil {
 			if char, ok := CharacterStore[result]; ok {
 				return &char, nil
 			} else {
@@ -77,7 +68,7 @@ func (char Character) SetOwnerId(ownerId string) error {
 
 func (char Character) GetOwnerId() (string, error) {
 	if rconn, err := common.RedisPool.Dial(); err == nil {
-		return redis.String(rconn.Do("GET", char.ownerKey()))
+		return common.RedisString(rconn.Do("GET", char.ownerKey()))
 	} else {
 		return "", err
 	}

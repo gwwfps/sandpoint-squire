@@ -1,10 +1,13 @@
 package handlers
 
-import "squire/slack/api"
+import (
+	"fmt"
+	"squire/slack/api"
+)
 
 type FallbackHandler struct {
 }
 
 func (c *FallbackHandler) Handle(msg api.ChatMessage) (bool, string, error) {
-	return true, "", nil
+	return true, fmt.Sprintf("Unknown command: %s", msg.Body), nil
 }

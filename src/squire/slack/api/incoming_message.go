@@ -30,10 +30,10 @@ func (message *IncomingMessage) UnmarshalJSON(data []byte) error {
 		message.Type = MessageEvent
 		inner := ChatMessage{}
 
-		err = inner.UnmarshalJSON(data)
-		if err != nil {
+		if err = json.Unmarshal(data, &inner); err != nil {
 			return err
 		}
+		inner.ParseBody()
 
 		message.Inner = inner
 	default:
