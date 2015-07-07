@@ -93,7 +93,7 @@ func processMessage(conn *websocket.Conn) error {
 
 				log.Println("Responding:", response)
 
-				replyMessage := api.NewOutgoingMessage(chatMessage.ChannelId, response)
+				replyMessage := api.NewChatReply(chatMessage, response)
 				replyData, err := json.Marshal(replyMessage)
 				if err != nil {
 					return common.AppendError("Error marshalling reply:", err)
