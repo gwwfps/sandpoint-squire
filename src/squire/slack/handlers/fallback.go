@@ -8,6 +8,10 @@ import (
 type FallbackHandler struct {
 }
 
-func (c *FallbackHandler) Handle(msg api.ChatMessage) (bool, string, error) {
-	return true, fmt.Sprintf("Unknown command: %s", msg.Body), nil
+func NewFallbackHandler(msg api.ChatMessage) MessageHandler {
+	return &FallbackHandler{}
+}
+
+func (c *FallbackHandler) Handle(msg api.ChatMessage) (string, error) {
+	return fmt.Sprintf("Unknown command: %s", msg.Body), nil
 }

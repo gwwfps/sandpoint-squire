@@ -39,6 +39,15 @@ func FindCharacter(fuzzyId string) *Character {
 	return nil
 }
 
+func (char Character) FindSkill(name string) *CharSkill {
+	for _, skill := range char.Skills {
+		if skill.Name == name {
+			return &skill
+		}
+	}
+	return nil
+}
+
 func FindOwnedCharacter(userId string) (*Character, error) {
 	if rconn, err := common.RedisPool.Dial(); err == nil {
 		if result, err := common.RedisString(rconn.Do("GET", charKey(userId))); err == nil {

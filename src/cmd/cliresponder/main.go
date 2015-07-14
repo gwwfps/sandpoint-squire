@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"squire/slack"
 	"squire/slack/api"
+	"squire/slack/handlers"
 )
 
 func main() {
@@ -15,7 +15,7 @@ func main() {
 	for scanner.Scan() {
 		input := scanner.Text()
 		if input != "" {
-			response := slack.HandleMessage(api.ChatMessage{
+			response := handlers.HandleMessage(api.ChatMessage{
 				Body:      input,
 				ChannelId: "D1234",
 				UserId:    "U4321",

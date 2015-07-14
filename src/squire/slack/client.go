@@ -10,6 +10,7 @@ import (
 
 	"squire/common"
 	"squire/slack/api"
+	"squire/slack/handlers"
 )
 
 const ERROR_LIMIT = 10
@@ -84,7 +85,7 @@ func processMessage(conn *websocket.Conn) error {
 			if chatMessage.Body != "" {
 				log.Println("Parsed message content:", chatMessage.Body)
 
-				response := HandleMessage(chatMessage)
+				response := handlers.HandleMessage(chatMessage)
 
 				if response == "" {
 					log.Println("Empty response, ignoring.")
