@@ -1,0 +1,99 @@
+- name: Brigandoom
+  set: B
+  copies: 1
+- name: The Poison Pill
+  set: B
+  copies: 1
+- name: Black Fang's Dungeon
+  set: B
+  copies: 1
+- name: Attack on Sandpoint
+  set: 1
+  copies: 1
+- name: Local Heroes
+  set: 1
+  copies: 1
+- name: Trouble in Sandpoint
+  set: 1
+  copies: 1
+- name: Approach to Thistletop
+  set: 1
+  copies: 1
+- name: Thistletop Delve
+  set: 1
+  copies: 1
+- name: Undead Uprising
+  set: 2
+  copies: 1
+- name: Crow Bait
+  set: 2
+  copies: 1
+- name: Foul Misgivings
+  set: 2
+  copies: 1
+- name: The Cult Exposed
+  set: 2
+  copies: 1
+- name: Angel in the Tower
+  set: 2
+  copies: 1
+- name: Them Ogres Ain't Right
+  set: 3
+  copies: 1
+- name: The Fort in Peril
+  set: 3
+  copies: 1
+- name: Here Comes the Flood
+  set: 3
+  copies: 1
+- name: Battle at the Dam
+  set: 3
+  copies: 1
+- name: Into the Mountains
+  set: 3
+  copies: 1
+- name: Sandpoint Under Siege
+  set: 4
+  copies: 1
+- name: Jorgenfist
+  set: 4
+  copies: 1
+- name: The Black Tower
+  set: 4
+  copies: 1
+- name: Under Jorgenfist
+  set: 4
+  copies: 1
+- name: The Ancient Library
+  set: 4
+  copies: 1
+- name: Underneath Sandpoint
+  set: 5
+  copies: 1
+- name: Rimeskull
+  set: 5
+  copies: 1
+- name: The Halls of Seduction
+  set: 5
+  copies: 1
+- name: Thassilonian Sins
+  set: 5
+  copies: 1
+- name: Into the Runeforge
+  set: 5
+  copies: 1
+- name: Cabin in the Snow
+  set: 6
+  copies: 1
+- name: The Road through Xin-Shalast
+  set: 6
+  copies: 1
+- name: Scaling Mhar Massif
+  set: 6
+  copies: 1
+- name: Assault on the Pinnacle
+  set: 6
+  copies: 1
+- name: Into the Eye
+  set: 6
+  copies: 1

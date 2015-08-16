@@ -19,6 +19,9 @@
 - name: Bear
   set: 4
   copies: 1
+- name: Biter
+  set: P
+  copies: 1
 - name: Black Arrow Ranger
   set: 3
   copies: 3
@@ -55,6 +58,9 @@
 - name: Dog
   set: C
   copies: 2
+- name: Droogami
+  set: P
+  copies: 1
 - name: Eagle
   set: 4
   copies: 1
@@ -141,6 +147,9 @@
   copies: 3
 - name: Soldier
   set: C
+  copies: 1
+- name: Splendiferous Hat
+  set: P
   copies: 1
 - name: Standard Bearer
   set: B

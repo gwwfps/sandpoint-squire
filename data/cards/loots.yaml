@@ -37,13 +37,13 @@
 - name: Runeforged Weapons
   set: 5
   copies: 1
-- name: Sihedron  Medallion
-  set: 1*
+- name: Sihedron Medallion
+  set: 1
   copies: 1
-- name: Sihedron  Medallion
+- name: Sihedron Medallion
   set: 2
   copies: 1
-- name: Sihedron  Medallion
+- name: Sihedron Medallion
   set: 3
   copies: 1
 - name: Sihedron Tome

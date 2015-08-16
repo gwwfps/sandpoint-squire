@@ -25,7 +25,7 @@
 - name: Blessing of Gorum
   set: C
   copies: 1
-- name: Blessing of Gorzreh
+- name: Blessing of Gozreh
   set: 4
   copies: 5
 - name: Blessing of Iomedae
@@ -73,6 +73,9 @@
 - name: Blessing of the Gods
   set: C
   copies: 5
+- name: Blessing of the Dawnflower
+  set: P
+  copies: 1
 - name: Blessing of Torag
   set: B
   copies: 4

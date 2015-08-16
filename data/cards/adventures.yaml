@@ -1,0 +1,21 @@
+- name: Perils of the Lost Coast
+  set: B
+  copies: 1
+- name: Burnt Offerings
+  set: 1
+  copies: 1
+- name: The Skinsaw Murders
+  set: 2
+  copies: 1
+- name: The Hook Mountain Massacre
+  set: 3
+  copies: 1
+- name: Fortress of the Stone Giants
+  set: 4
+  copies: 1
+- name: Sins of the Saviors
+  set: 5
+  copies: 1
+- name: Spires of Xin-Shalast
+  set: 6
+  copies: 1

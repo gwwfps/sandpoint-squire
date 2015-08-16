@@ -97,6 +97,9 @@
 - name: Magic Studded Leather Armor
   set: 3
   copies: 2
+- name: Paladin´s Helm
+  set: P
+  copies: 1
 - name: Reflecting Shield
   set: 4
   copies: 1

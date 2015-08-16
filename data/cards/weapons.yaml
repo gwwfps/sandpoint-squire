@@ -49,6 +49,9 @@
 - name: Force Sling +3
   set: 6
   copies: 2
+- name: Frost Giant's Sword +1
+  set: P
+  copies: 1
 - name: Frost Longbow +1
   set: 3
   copies: 2
@@ -172,6 +175,9 @@
 - name: Starknife
   set: B
   copies: 1
+- name: Temple Sword +1
+  set: P
+  copies: 1
 - name: Throwing Axe
   set: B
   copies: 1
@@ -181,6 +187,9 @@
 - name: Venomous Heavy Crossbow +2
   set: 5
   copies: 2
+- name: Veteran's Longspear
+  set: P
+  copies: 1
 - name: Vicious Trident +1
   set: 3
   copies: 2

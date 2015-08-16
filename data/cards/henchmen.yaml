@@ -121,7 +121,7 @@
 - name: Orik Vancaskerkin
   set: 1
   copies: 1
-- name: Pidget Tergleson
+- name: Pidget Tergelson
   set: 2
   copies: 1
 - name: Poison Trap
@@ -172,6 +172,6 @@
 - name: Xyoddin Xerriock
   set: 5
   copies: 1
-- name: Zombie Minions
+- name: Zombie Minion
   set: 2
   copies: 4

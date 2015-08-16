@@ -166,11 +166,14 @@
 - name: Rat Swarm
   set: B
   copies: 2
-- name: Red Cap
+- name: Redcap
   set: 4
   copies: 1
 - name: Roc
   set: 4
+  copies: 1
+- name: Rogue Eidolon
+  set: P
   copies: 1
 - name: Satyr
   set: C

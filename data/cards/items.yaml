@@ -1,3 +1,6 @@
+- name: Alchemy Lab
+  set: P
+  copies: 1
 - name: Amulet of Fiery Fists
   set: 4
   copies: 1
@@ -9,6 +12,15 @@
   copies: 1
 - name: Amulet of Mighty Fists
   set: C
+  copies: 1
+- name: Arcane Robes
+  set: P
+  copies: 1
+- name: Arcane Staff
+  set: P
+  copies: 1
+- name: Bag of Sticks
+  set: P
   copies: 1
 - name: Belt of Giant Strength
   set: 3
@@ -61,6 +73,9 @@
 - name: Eyes of the Eagle
   set: C
   copies: 1
+- name: Footpad's Boots
+  set: P
+  copies: 1
 - name: Greater Luckstone
   set: 4
   copies: 1
@@ -96,6 +111,9 @@
   copies: 1
 - name: Mattock
   set: C
+  copies: 1
+- name: Mysterious Disk
+  set: P
   copies: 1
 - name: Necklace of Fireballs
   set: 4
@@ -148,8 +166,11 @@
 - name: Ring of Protection
   set: 2
   copies: 2
-- name: Sage's journal
+- name: Sage's Journal
   set: C
+  copies: 1
+- name: Seer´s Headdress
+  set: P
   copies: 1
 - name: Sihedron Ring
   set: 6
@@ -166,7 +187,13 @@
 - name: Staff of Minor Healing
   set: 1
   copies: 2
-- name: Thieve's Tools
+- name: Tankard
+  set: P
+  copies: 1
+- name: Teapot
+  set: P
+  copies: 1
+- name: Thieves' Tools
   set: B
   copies: 3
 - name: Token of Remembrance

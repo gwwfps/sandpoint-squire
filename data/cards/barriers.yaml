@@ -28,7 +28,7 @@
 - name: Cryptic Message
   set: 3
   copies: 1
-- name: Dance with  Squealy Nord
+- name: Dance with Squealy Nord
   set: P
   copies: 1
 - name: Disjunction Pulse

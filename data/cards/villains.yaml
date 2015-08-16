@@ -1,4 +1,4 @@
-- name: Arkryst
+- name: Arkrhyst
   set: 5
   copies: 1
 - name: Azaven
@@ -43,7 +43,7 @@
 - name: Justice Ironbriar
   set: 2
   copies: 1
-- name: Karzoug Statute
+- name: Karzoug Statue
   set: 5
   copies: 1
 - name: Karzoug the Claimer
@@ -70,7 +70,7 @@
 - name: Ordikon
   set: 5
   copies: 1
-- name: Pillbug Podicker
+- name: Pillbug Podiker
   set: B
   copies: 1
 - name: Ripnugget and Stickfoot
@@ -100,7 +100,7 @@
 - name: The Thing From Beyond Time
   set: 6
   copies: 1
-- name: Wendingo
+- name: Wendigo
   set: 6
   copies: 1
 - name: Xanesha
